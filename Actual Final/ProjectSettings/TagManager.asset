@@ -5,14 +5,15 @@ TagManager:
   serializedVersion: 2
   tags:
   - TutorialRequirement
+  - Ground
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Foreground
   - Water
   - UI
-  - 
+  - Background
   - 
   - 
   - 
@@ -41,4 +42,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: ForeGround
+    uniqueID: 897109725
+    locked: 0
+  - name: BackGround
+    uniqueID: 4147198269
     locked: 0
