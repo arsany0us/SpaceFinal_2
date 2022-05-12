@@ -10,11 +10,15 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb2d;
     private Animator anim;
 
+    AudioSource audioSource;
+    public AudioClip coinSound;
+
     // Start is called before the first frame update
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
 
     }
 
@@ -46,8 +50,14 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Coins"))
         {
+            PlaySound(coinSound);
             Destroy(other.gameObject);
-        }
+}
         
     }
+    public void PlaySound(AudioClip clip)
+    {
+        audioSource.PlayOneShot(clip);
+    }
 }
+
