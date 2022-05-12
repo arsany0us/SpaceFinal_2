@@ -31,11 +31,23 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
-    private void OnCollisionEnter2D()
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        rb2d.velocity = Vector2.zero;
-        isDead = true;
-        anim.SetTrigger("Die");
-        GameControl.instance.BirdDied();
+        if (other.gameObject.CompareTag("Obstacle"))
+        {
+            rb2d.velocity = Vector2.zero;
+            isDead = true;
+            anim.SetTrigger("Die");
+            GameControl.instance.GameOver();
+        }
+            
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Coins"))
+        {
+            Destroy(other.gameObject);
+        }
+        
     }
 }

@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class GameControl : MonoBehaviour
 {
+    public GameOver GameOverScreen;
+    int maxPlatform = 0;
     public static GameControl instance;
-    public Text scoreText;
-    public GameObject gameOvertext;
 
     private int score = 0;
     public bool gameOver = false;
@@ -27,29 +27,10 @@ public class GameControl : MonoBehaviour
             Destroy(gameObject);
     }
 
-    void Update()
+   
+    public void GameOver()
     {
 
-        if (gameOver && Input.GetMouseButtonDown(0))
-        {
-
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
-    }
-
-    public void BirdScored()
-    {
-
-        if (gameOver)
-            return;
-        score++;
-        scoreText.text = "Score: " + score.ToString();
-    }
-
-    public void BirdDied()
-    {
-
-        gameOvertext.SetActive(true);
-        gameOver = true;
+        GameOverScreen.Setup(maxPlatform);
     }
 }
