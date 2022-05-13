@@ -47,8 +47,16 @@ public class PlayerController : MonoBehaviour
             anim.SetTrigger("Die");
             GameControl.instance.GameOver();
         }
-       
 
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            Ground = true;
+            anim.SetTrigger("Ground");
+        }
+        else
+        {
+            Ground = false;
+        }
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -63,19 +71,7 @@ public class PlayerController : MonoBehaviour
     {
         audioSource.PlayOneShot(clip);
     }
-    public void OnCollisionStay2D(Collision2D other)
-    {
-        if (other.gameObject.CompareTag("Ground"))
-        {
-            Ground = true;
-            anim.SetTrigger("Ground");
-        }
-        else
-        {
-            Ground = false;
-        }
-
-    }
+   
 }
 
 
