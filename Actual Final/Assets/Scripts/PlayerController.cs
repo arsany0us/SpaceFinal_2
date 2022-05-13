@@ -70,7 +70,10 @@ public class PlayerController : MonoBehaviour
             Ground = true;
             anim.SetTrigger("Ground");
         }
-        else if ()
+        else
+        {
+            Ground = false;
+        }
 
     }
 }
