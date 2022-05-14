@@ -32,6 +32,7 @@ public class GameControl : MonoBehaviour
    
     public void GameOver()
     {
+        gameOver = true;
         restartButton.gameObject.SetActive(true);
         GameOverScreen.Setup(maxPlatform);
     }

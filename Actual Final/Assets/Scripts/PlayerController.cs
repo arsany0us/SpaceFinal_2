@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public GameObject titleScreen;
     public float upForce = 200f;
     public bool Ground = true;
     public bool fly = false;
@@ -30,22 +31,22 @@ public class PlayerController : MonoBehaviour
     {
         if (isDead == false)
         {
-            if ((Input.GetMouseButtonDown(0)))            
+            if ((Input.GetKeyDown(KeyCode.Space)))           
             {
              
                 rb2d.velocity = Vector2.zero;
                 rb2d.AddForce(new Vector2(0, upForce));
-             
+                titleScreen.gameObject.SetActive(false);
+
             }
         }
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("Obstacle "))
+        if (other.gameObject.CompareTag("Obstacle"))
         {
             rb2d.velocity = Vector2.zero;
             isDead = true;
-            anim.SetTrigger("Die");
             GameControl.instance.GameOver();
         }
 

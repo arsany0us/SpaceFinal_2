@@ -5,14 +5,14 @@ public class ObstaclePool : MonoBehaviour
     public GameObject columnPrefab;
     public int columnPoolSize = 5;
     public float spawnRate = 2f;
-    public float enemyMin = 1f;
-    public float enemyMax = 3f;                                    //Maximum y value of the column position.
+    public float enemyMin = 0f;
+    public float enemyMax = 10f;                                    //Maximum y value of the column position.
 
     private GameObject[] columns;                                    //Collection of pooled columns.
     private int currentColumn = 0;                                    //Index of the current column in the collection.
 
     private Vector2 objectPoolPosition = new Vector2(-15, -25);        //A holding position for our unused columns offscreen.
-    private float spawnXPosition = 10f;
+    private float spawnXPosition = 3f;
 
     private float timeSinceLastSpawned;
 
