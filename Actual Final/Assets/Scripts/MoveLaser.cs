@@ -11,7 +11,6 @@ public class MoveLaser : MonoBehaviour
     public Transform shootPos;
     public GameObject bullet;
     public GameObject diePEffect;
-    public GameObject titleScreen;
     private void Start()
     {
         isShooting = false;
@@ -20,7 +19,6 @@ public class MoveLaser : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && !isShooting)
         {
-            titleScreen.gameObject.SetActive(false);
             StartCoroutine(Shoot());
         }
     }

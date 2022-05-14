@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public GameObject titleScreen;
     public float upForce = 200f;
     public bool Ground = true;
     public bool fly = false;
@@ -36,7 +35,6 @@ public class PlayerController : MonoBehaviour
              
                 rb2d.velocity = Vector2.zero;
                 rb2d.AddForce(new Vector2(0, upForce));
-                titleScreen.gameObject.SetActive(false);
 
             }
         }

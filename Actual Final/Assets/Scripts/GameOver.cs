@@ -8,7 +8,6 @@ public class GameOver : MonoBehaviour
 {
     public Text pointsText;
     public Button restartButton;
-    public GameObject titleScreen;
     public void Setup(int score)
     {
         restartButton.gameObject.SetActive(true);
@@ -20,7 +19,6 @@ public class GameOver : MonoBehaviour
     public void RestartButton()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        titleScreen.gameObject.SetActive(false);
 
     }
 }
