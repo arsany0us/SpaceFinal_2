@@ -593,6 +593,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upForce: 200
   Ground: 1
+  fly: 0
   coinSound: {fileID: 8300000, guid: bf527d825758e5b4ca7b69f5a02d9a56, type: 3}
 --- !u!50 &392294102
 Rigidbody2D:
@@ -628,7 +629,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.28427935, y: -0.17494059}
+  m_Offset: {x: 0.07726431, y: -0.17494106}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -639,7 +640,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.026619, y: 4.2452946}
+  m_Size: {x: 2.9152765, y: 3.809474}
   m_EdgeRadius: 0
 --- !u!212 &392294104
 SpriteRenderer:
@@ -678,8 +679,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 897109725
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d692dcc7ef4854bb0b35411f364a7914, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -700,7 +701,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 392294100}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.63, z: 0}
+  m_LocalPosition: {x: -4.87, y: -2.8, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
@@ -902,6 +903,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 803793556}
   m_CullTransparentMesh: 1
+--- !u!1 &983989647
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 983989649}
+  - component: {fileID: 983989648}
+  m_Layer: 0
+  m_Name: EnemySpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &983989648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 983989647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d15fcb4455bbb834db8763b1aabbf1d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 795080701030989134, guid: 39e421e34e628a14fb3a9c3cbb3db266, type: 3}
+  spawnRate: 2
+--- !u!4 &983989649
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 983989647}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1054412630
 GameObject:
   m_ObjectHideFlags: 0
@@ -1692,6 +1738,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointsText: {fileID: 1404883048}
+  restartButton: {fileID: 803793558}
+  titleScreen: {fileID: 1950066405}
 --- !u!224 &1818964756
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1761,7 +1809,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1919054712}
-  - component: {fileID: 1919054711}
   - component: {fileID: 1919054710}
   - component: {fileID: 1919054713}
   m_Layer: 0
@@ -1783,24 +1830,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fd3c1006f0581a468cbc7d55491e1f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targets: []
   GameOverScreen: {fileID: 1818964755}
+  restartButton: {fileID: 803793558}
   gameOver: 0
   scrollSpeed: -3
---- !u!114 &1919054711
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1919054709}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fd3c1006f0581a468cbc7d55491e1f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GameOverScreen: {fileID: 1818964755}
-  gameOver: 0
-  scrollSpeed: -1.5
 --- !u!4 &1919054712
 Transform:
   m_ObjectHideFlags: 0

@@ -6,7 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class GameControl : MonoBehaviour
 {
+    public List<GameObject> targets;
     public GameOver GameOverScreen;
+    public Button restartButton;
     int maxPlatform = 0;
     public static GameControl instance;
 
@@ -30,7 +32,7 @@ public class GameControl : MonoBehaviour
    
     public void GameOver()
     {
-
+        restartButton.gameObject.SetActive(true);
         GameOverScreen.Setup(maxPlatform);
     }
 }

@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public float upForce = 200f;
     public bool Ground = true;
+    public bool fly = false;
      private bool isDead = false;
     private Rigidbody2D rb2d;
     private Animator anim;
@@ -40,7 +41,7 @@ public class PlayerController : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("Obstacle"))
+        if (other.gameObject.CompareTag("Obstacle "))
         {
             rb2d.velocity = Vector2.zero;
             isDead = true;
@@ -55,7 +56,17 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
+            fly = true;
+            anim.SetTrigger("Fly");
             Ground = false;
+        }
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            rb2d.velocity = Vector2.zero;
+            isDead = true;
+            anim.SetTrigger("Die");
+            GameControl.instance.GameOver();
+            Destroy(gameObject);
         }
     }
     private void OnTriggerEnter2D(Collider2D other)
