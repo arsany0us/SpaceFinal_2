@@ -415,6 +415,7 @@ GameObject:
   - component: {fileID: 392294103}
   - component: {fileID: 392294102}
   - component: {fileID: 392294101}
+  - component: {fileID: 392294107}
   m_Layer: 0
   m_Name: 'hero '
   m_TagString: Player
@@ -547,7 +548,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.87, y: -2.8, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
-  m_Children: []
+  m_Children:
+  - {fileID: 1458524957}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -570,6 +572,25 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &392294107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 392294100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea368c5a2cb7eb84083ee1d49467a37b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootSpeed: 900
+  shootTimer: 0.5
+  shootPos: {fileID: 1458524957}
+  bullet: {fileID: 3185455723909088365, guid: 9440a9d05cc068944a94ad1976632bb6, type: 3}
+  diePEffect: {fileID: 5770513284971486597, guid: 0deb2d46d6a2c0f4f9e67b770fb0dfec,
+    type: 3}
+  titleScreen: {fileID: 1950066405}
 --- !u!1 &751422372
 GameObject:
   m_ObjectHideFlags: 0
@@ -1450,6 +1471,36 @@ RectTransform:
   m_AnchoredPosition: {x: 2.8343, y: -30}
   m_SizeDelta: {x: 286.5467, y: 57.7114}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1458524956
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1458524957}
+  m_Layer: 0
+  m_Name: LaserPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1458524957
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458524956}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.05, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 392294105}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1462863202
 GameObject:
   m_ObjectHideFlags: 0
@@ -1840,8 +1891,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1919054712}
-  - component: {fileID: 1919054710}
   - component: {fileID: 1919054713}
+  - component: {fileID: 1919054710}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1865,7 +1916,7 @@ MonoBehaviour:
   GameOverScreen: {fileID: 1818964755}
   restartButton: {fileID: 803793558}
   gameOver: 0
-  scrollSpeed: -3
+  scrollSpeed: -10
 --- !u!4 &1919054712
 Transform:
   m_ObjectHideFlags: 0
