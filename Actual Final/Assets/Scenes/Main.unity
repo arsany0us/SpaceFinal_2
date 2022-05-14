@@ -436,7 +436,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   titleScreen: {fileID: 1950066405}
-  upForce: 200
+  upForce: 800
   Ground: 1
   fly: 0
   coinSound: {fileID: 8300000, guid: bf527d825758e5b4ca7b69f5a02d9a56, type: 3}
@@ -452,10 +452,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 3
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -934,7 +934,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 8329654952802681423, guid: 8cb7aa86727d03642ad0d2881c39129e, type: 3}
-  respawnTime: 1
+  respawnTime: 0.4
 --- !u!114 &1076736357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -948,7 +948,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 795080701030989134, guid: 39e421e34e628a14fb3a9c3cbb3db266, type: 3}
-  respawnTime: 5
+  respawnTime: 4
 --- !u!4 &1076736358
 Transform:
   m_ObjectHideFlags: 0
@@ -976,7 +976,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 5780137694962035957, guid: 14c8aa08c2533284bb670d9bdb3e763e, type: 3}
-  respawnTime: 3
+  respawnTime: 1
 --- !u!1 &1131100927
 GameObject:
   m_ObjectHideFlags: 0
@@ -1891,7 +1891,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1919054712}
-  - component: {fileID: 1919054713}
   - component: {fileID: 1919054710}
   m_Layer: 0
   m_Name: GameManager
@@ -1931,24 +1930,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1919054713
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1919054709}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65241bfcde92a79428b8f42795b3bcae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  columnPrefab: {fileID: 5780137694962035957, guid: 14c8aa08c2533284bb670d9bdb3e763e,
-    type: 3}
-  columnPoolSize: 5
-  spawnRate: 2
-  enemyMin: 0
-  enemyMax: 0
 --- !u!1 &1950066405
 GameObject:
   m_ObjectHideFlags: 0
