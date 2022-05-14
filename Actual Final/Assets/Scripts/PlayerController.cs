@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
 
     AudioSource audioSource;
     public AudioClip coinSound;
+    public GameObject projectile;
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +39,10 @@ public class PlayerController : MonoBehaviour
                 rb2d.AddForce(new Vector2(0, upForce));
                 titleScreen.gameObject.SetActive(false);
 
+            }
+            if (Input.GetMouseButtonDown(0))
+            {
+                Instantiate(projectile, transform.position, projectile.transform.rotation);
             }
         }
     }
