@@ -515,8 +515,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upForce: 800
-  Ground: 1
   fly: 0
+  isDead: 0
+  isOnGround: 1
   coinSound: {fileID: 8300000, guid: bf527d825758e5b4ca7b69f5a02d9a56, type: 3}
 --- !u!50 &392294102
 Rigidbody2D:
@@ -1122,9 +1123,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1076736358}
-  - component: {fileID: 1076736357}
   - component: {fileID: 1076736356}
   - component: {fileID: 1076736359}
+  - component: {fileID: 1076736360}
+  - component: {fileID: 1076736357}
   m_Layer: 0
   m_Name: ObjectSpawner
   m_TagString: Untagged
@@ -1144,7 +1146,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d15fcb4455bbb834db8763b1aabbf1d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 8329654952802681423, guid: 8cb7aa86727d03642ad0d2881c39129e, type: 3}
+  obstacle: {fileID: 8329654952802681423, guid: 8cb7aa86727d03642ad0d2881c39129e,
+    type: 3}
   respawnTime: 0.4
 --- !u!114 &1076736357
 MonoBehaviour:
@@ -1155,11 +1158,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1076736355}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d15fcb4455bbb834db8763b1aabbf1d2, type: 3}
+  m_Script: {fileID: 11500000, guid: 670e50e2c98f99f4ab9f0a10ff1f4b9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 795080701030989134, guid: 39e421e34e628a14fb3a9c3cbb3db266, type: 3}
-  respawnTime: 4
+  obstacle: {fileID: 795080701030989134, guid: 39e421e34e628a14fb3a9c3cbb3db266, type: 3}
+  respawnTime: 5
+  spawnPosY: -3.75
 --- !u!4 &1076736358
 Transform:
   m_ObjectHideFlags: 0
@@ -1186,8 +1190,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d15fcb4455bbb834db8763b1aabbf1d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 5780137694962035957, guid: 14c8aa08c2533284bb670d9bdb3e763e, type: 3}
-  respawnTime: 1
+  obstacle: {fileID: 5780137694962035957, guid: 14c8aa08c2533284bb670d9bdb3e763e,
+    type: 3}
+  respawnTime: 2
+--- !u!114 &1076736360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1076736355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 670e50e2c98f99f4ab9f0a10ff1f4b9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstacle: {fileID: 511354809679151597, guid: 4a97e9d9070d49e41967e7c49abf8084, type: 3}
+  respawnTime: 3
+  spawnPosY: -3.75
 --- !u!1 &1131100927
 GameObject:
   m_ObjectHideFlags: 0

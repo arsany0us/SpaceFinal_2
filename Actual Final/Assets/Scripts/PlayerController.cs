@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float upForce = 200f;
-    public bool Ground = true;
+    public float upForce = 800f;
+
     public bool fly = false;
-     private bool isDead = false;
+    public bool isDead = false;
     private Rigidbody2D rb2d;
     private Animator anim;
+    public bool isOnGround = true;
 
     AudioSource audioSource;
     public AudioClip coinSound;
@@ -17,7 +18,6 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Ground = true;
         
         rb2d = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
@@ -30,11 +30,18 @@ public class PlayerController : MonoBehaviour
     {
         if (isDead == false)
         {
-            if ((Input.GetKeyDown(KeyCode.Space)))           
+            if ((Input.GetKeyDown(KeyCode.Space)))
             {
              
                 rb2d.velocity = Vector2.zero;
                 rb2d.AddForce(new Vector2(0, upForce));
+                isOnGround = false;
+                fly = true;
+                if(fly == true)
+                {
+                    anim.SetTrigger("Fly");
+                }
+       
 
             }
         }
@@ -50,20 +57,24 @@ public class PlayerController : MonoBehaviour
 
         if (other.gameObject.CompareTag("Ground"))
         {
-            Ground = true;
-            anim.SetTrigger("Ground");
+            isOnGround = true;
+            if(isOnGround == true)
+            {
+                anim.SetTrigger("Ground");
+            }
         }
         else
         {
             fly = true;
-            anim.SetTrigger("Fly");
-            Ground = false;
+            if(fly == true)
+            {
+                anim.SetTrigger("Fly");
+            }
+ 
         }
         if (other.gameObject.CompareTag("Enemy"))
         {
             rb2d.velocity = Vector2.zero;
-            isDead = true;
-            anim.SetTrigger("Die");
             GameControl.instance.GameOver();
             Destroy(gameObject);
         }
@@ -82,6 +93,7 @@ public class PlayerController : MonoBehaviour
     {
         audioSource.PlayOneShot(clip);
     }
+  
    
 }
 
