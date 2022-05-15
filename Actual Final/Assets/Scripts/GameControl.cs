@@ -11,9 +11,9 @@ public class GameControl : MonoBehaviour
     public Button restartButton;
     int maxPlatform = 0;
     public static GameControl instance;
+    public bool gameOver = true;
 
     private int score = 0;
-    public bool gameOver = false;
     public float scrollSpeed = -1.5f;
 
 

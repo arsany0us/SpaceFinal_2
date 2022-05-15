@@ -13,7 +13,6 @@ public class GameOver : MonoBehaviour
         restartButton.gameObject.SetActive(true);
         gameObject.SetActive(true);
         pointsText.text = score.ToString() + "POINTS";
-        RestartButton();
     }
 
     public void RestartButton()
