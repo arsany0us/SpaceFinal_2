@@ -17,6 +17,10 @@ public class SoundManager : MonoBehaviour
 
     private void Update()
     {
+        if (PauseMenu.GameIsPaused)
+        {
+            audioSrc.pitch *= .5f;
+        }
         audioSrc.volume = musicVolume;
     }
 

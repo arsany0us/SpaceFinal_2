@@ -36,12 +36,17 @@ public class PlayerController : MonoBehaviour
                 rb2d.velocity = Vector2.zero;
                 rb2d.AddForce(new Vector2(0, upForce));
                 isOnGround = false;
-                fly = true;
-                if(fly == true)
                 {
-                    anim.SetTrigger("Fly");
+                    if(isOnGround == false)
+                    {
+                        anim.SetTrigger("Fly");
+                    }
                 }
-       
+                if(isOnGround == true)
+                {
+                    anim.SetTrigger("Ground");
+                }
+              
 
             }
         }

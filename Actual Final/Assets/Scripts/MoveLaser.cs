@@ -11,15 +11,21 @@ public class MoveLaser : MonoBehaviour
     public Transform shootPos;
     public GameObject bullet;
     public GameObject diePEffect;
+
+    AudioSource audioSource;
+    public AudioClip laserSound;
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         isShooting = false;
     }
     private void Update()
     {
         if (Input.GetMouseButtonDown(0) && !isShooting)
         {
+
             StartCoroutine(Shoot());
+            PlaySound(laserSound);
         }
     }
 
@@ -53,5 +59,10 @@ public class MoveLaser : MonoBehaviour
             Instantiate(diePEffect, transform.position, Quaternion.identity);
         }
         Destroy(gameObject);
+    }
+
+    public void PlaySound(AudioClip clip)
+    {
+        audioSource.PlayOneShot(clip);
     }
 }
