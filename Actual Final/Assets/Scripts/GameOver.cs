@@ -11,13 +11,15 @@ public class GameOver : MonoBehaviour
 
     public Text pointsText;
     public Button restartButton;
+
+
     public void Setup(int score)
     { 
         audioSource = GetComponent<AudioSource>();
         PlaySound(DeadSound);
         restartButton.gameObject.SetActive(true);
         gameObject.SetActive(true);
-        pointsText.text = score.ToString() + "POINTS";
+
     }
 
     public void RestartButton()
@@ -27,6 +29,7 @@ public class GameOver : MonoBehaviour
     }
     public void MainMenu()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 
