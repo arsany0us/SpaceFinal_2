@@ -6,10 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
+    AudioSource audioSource;
+    public AudioClip DeadSound;
+
     public Text pointsText;
     public Button restartButton;
     public void Setup(int score)
-    {
+    { 
+        audioSource = GetComponent<AudioSource>();
+        PlaySound(DeadSound);
         restartButton.gameObject.SetActive(true);
         gameObject.SetActive(true);
         pointsText.text = score.ToString() + "POINTS";
@@ -23,5 +28,10 @@ public class GameOver : MonoBehaviour
     public void MainMenu()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    }
+
+    public void PlaySound(AudioClip clip)
+    {
+        audioSource.PlayOneShot(clip);
     }
 }

@@ -2409,30 +2409,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1275714326537315254, guid: 3a61ddad8f2afa147b44c653bb752377,
-          type: 3}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1818964755}
+        m_TargetAssemblyTypeName: GameOver, Assembly-CSharp
+        m_MethodName: MainMenu
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Menu
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1357979947
 MonoBehaviour:
@@ -2621,6 +2608,7 @@ GameObject:
   - component: {fileID: 1404883050}
   - component: {fileID: 1404883049}
   - component: {fileID: 1404883048}
+  - component: {fileID: 1404883051}
   m_Layer: 5
   m_Name: PointsValue
   m_TagString: Untagged
@@ -2661,7 +2649,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '10 Points '
+  m_Text: ' Points '
 --- !u!222 &1404883049
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2689,6 +2677,21 @@ RectTransform:
   m_AnchoredPosition: {x: 2.8343, y: -30}
   m_SizeDelta: {x: 286.5467, y: 57.7114}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1404883051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404883047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 080de9b77447cd6449a029f184b0249d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DeadSound: {fileID: 0}
+  pointsText: {fileID: 1404883048}
+  restartButton: {fileID: 0}
 --- !u!1 &1462863202
 GameObject:
   m_ObjectHideFlags: 0
@@ -2891,6 +2894,7 @@ GameObject:
   - component: {fileID: 1818964758}
   - component: {fileID: 1818964757}
   - component: {fileID: 1818964755}
+  - component: {fileID: 1818964759}
   m_Layer: 5
   m_Name: GameOverScreen
   m_TagString: Untagged
@@ -2910,6 +2914,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 080de9b77447cd6449a029f184b0249d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DeadSound: {fileID: 8300000, guid: d1cf8a05f38d37144a4a3689e7ee30b5, type: 3}
   pointsText: {fileID: 1404883048}
   restartButton: {fileID: 803793558}
 --- !u!224 &1818964756
@@ -2973,6 +2978,102 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1818964754}
   m_CullTransparentMesh: 1
+--- !u!82 &1818964759
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1818964754}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: d1cf8a05f38d37144a4a3689e7ee30b5, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1919054709
 GameObject:
   m_ObjectHideFlags: 0
