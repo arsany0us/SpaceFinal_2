@@ -11,6 +11,30 @@ TextureImporter:
   - first:
       213: -2048219837778658786
     second: Space BackGround (5)_2
+  - first:
+      213: -4321755550842376514
+    second: Space BackGround (5)_3
+  - first:
+      213: 8023316166222239774
+    second: Space BackGround (5)_4
+  - first:
+      213: 4727636417589145629
+    second: Space BackGround (5)_5
+  - first:
+      213: -3509802101022170525
+    second: Space BackGround (5)_6
+  - first:
+      213: 4911404517672533189
+    second: Space BackGround (5)_7
+  - first:
+      213: -344700849783073519
+    second: Space BackGround (5)_8
+  - first:
+      213: 7095280007540762543
+    second: Space BackGround (5)_9
+  - first:
+      213: -2343245869215038572
+    second: Space BackGround (5)_10
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -140,9 +164,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 512
+        y: 877.7143
         width: 512
-        height: 512
+        height: 146.28572
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,9 +185,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 512
-        y: 512
+        y: 877.7143
         width: 512
-        height: 512
+        height: 146.28572
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,9 +206,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 731.7143
         width: 512
-        height: 512
+        height: 146.28572
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,6 +218,174 @@ TextureImporter:
       bones: []
       spriteID: e1a7b43d8e24393e0800000000000000
       internalID: -2048219837778658786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space BackGround (5)_3
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 731.7143
+        width: 512
+        height: 146.28572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebea7f1693a0604c0800000000000000
+      internalID: -4321755550842376514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space BackGround (5)_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 585.7143
+        width: 512
+        height: 146.28572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1853583b8b885f60800000000000000
+      internalID: 8023316166222239774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space BackGround (5)_5
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 585.7143
+        width: 512
+        height: 146.28572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d10f9911640fb9140800000000000000
+      internalID: 4727636417589145629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space BackGround (5)_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 439.7143
+        width: 512
+        height: 146.28572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36267a8b59daa4fc0800000000000000
+      internalID: -3509802101022170525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space BackGround (5)_7
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 439.7143
+        width: 512
+        height: 146.28572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ccbe181360d82440800000000000000
+      internalID: 4911404517672533189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space BackGround (5)_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 293.7143
+        width: 512
+        height: 146.28572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11597e64760673bf0800000000000000
+      internalID: -344700849783073519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space BackGround (5)_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 147.71428
+        width: 512
+        height: 146.28572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa7e56f039f777260800000000000000
+      internalID: 7095280007540762543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space BackGround (5)_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1.7142792
+        width: 512
+        height: 146.28572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49349080c4e1b7fd0800000000000000
+      internalID: -2343245869215038572
       vertices: []
       indices: 
       edges: []
