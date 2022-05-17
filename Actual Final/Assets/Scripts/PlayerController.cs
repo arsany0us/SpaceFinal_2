@@ -71,6 +71,12 @@ public class PlayerController : MonoBehaviour
             
  
         }*/
+
+        if(other.gameObject.name != "Ground")
+        {
+            Debug.Log("Flying");
+            anim.SetTrigger("Fly");
+        }
         if (other.gameObject.CompareTag("Enemy"))
         {
             rb2d.velocity = Vector2.zero;
