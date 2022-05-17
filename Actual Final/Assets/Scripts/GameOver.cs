@@ -7,16 +7,18 @@ using UnityEngine.SceneManagement;
 public class GameOver : MonoBehaviour
 {
     AudioSource audioSource;
-    public AudioClip DeadSound;
+    public AudioClip DeathSound;
 
-    public Text pointsText;
     public Button restartButton;
 
-
+    public void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+        PlaySound(DeathSound);
+    }
     public void Setup(int score)
     { 
-        audioSource = GetComponent<AudioSource>();
-        PlaySound(DeadSound);
+
         restartButton.gameObject.SetActive(true);
         gameObject.SetActive(true);
 
@@ -25,7 +27,6 @@ public class GameOver : MonoBehaviour
     public void RestartButton()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-
     }
     public void MainMenu()
     {
