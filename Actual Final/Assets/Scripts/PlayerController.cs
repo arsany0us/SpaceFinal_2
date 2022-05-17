@@ -42,12 +42,11 @@ public class PlayerController : MonoBehaviour
                         anim.SetTrigger("Fly");
                     }
                 }
-                if(isOnGround == true)
-                {
-                    anim.SetTrigger("Ground");
-                }
-              
-
+               
+            }
+            if (isOnGround == true)
+            {
+                anim.SetTrigger("walk");
             }
         }
     }
