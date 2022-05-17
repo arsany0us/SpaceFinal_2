@@ -44,10 +44,7 @@ public class PlayerController : MonoBehaviour
                 }
                
             }
-            if (isOnGround == true)
-            {
-                anim.SetTrigger("walk");
-            }
+            
         }
     }
     private void OnCollisionEnter2D(Collision2D other)
@@ -62,20 +59,18 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("Ground"))
         {
             isOnGround = true;
-            if(isOnGround == true)
-            {
+            Debug.Log("touching the ground");
                 anim.SetTrigger("Ground");
-            }
+            
         }
-        else
+        /*else
         {
             fly = true;
-            if(fly == true)
-            {
+            Debug.Log(" im flying");
                 anim.SetTrigger("Fly");
-            }
+            
  
-        }
+        }*/
         if (other.gameObject.CompareTag("Enemy"))
         {
             rb2d.velocity = Vector2.zero;
