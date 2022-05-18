@@ -758,6 +758,7 @@ GameObject:
   m_Component:
   - component: {fileID: 703622773}
   - component: {fileID: 703622775}
+  - component: {fileID: 703622774}
   m_Layer: 0
   m_Name: GroundCheck
   m_TagString: Untagged
@@ -779,6 +780,20 @@ Transform:
   m_Father: {fileID: 2143336047}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &703622774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 703622772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad9d176a94802ab43b28e8643d13a39b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOnGround: 1
+  groundCheck: {fileID: 703622773}
 --- !u!212 &703622775
 SpriteRenderer:
   m_ObjectHideFlags: 0
