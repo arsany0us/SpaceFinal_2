@@ -49,6 +49,7 @@ public class MoveLaser : MonoBehaviour
         if (collisionGameObject.CompareTag("Obstacle"))
         {
             Destroy(gameObject);
+            Die();
         }
     }
 
