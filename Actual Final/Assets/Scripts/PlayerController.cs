@@ -53,13 +53,7 @@ public class PlayerController : MonoBehaviour
             GameControl.instance.GameOver();
         }
 
-        /*if (other.gameObject.CompareTag("Ground"))
-        {
-            
-            Debug.Log("touching the ground");
-                anim.SetTrigger("Ground");
-            
-        }*/
+      
         if (other.gameObject.CompareTag("Enemy"))
         {
             rb2d.velocity = Vector2.zero;
