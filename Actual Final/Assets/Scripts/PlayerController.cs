@@ -35,12 +35,9 @@ public class PlayerController : MonoBehaviour
 
                 rb2d.velocity = Vector2.zero;
                 rb2d.AddForce(new Vector2(0, upForce));
-                isOnGround = false;
+                
                 {
-                    if(isOnGround == false)
-                    {
-                        anim.SetTrigger("Fly");
-                    }
+                    anim.SetTrigger("Fly");
                 }
                
             }
@@ -56,27 +53,13 @@ public class PlayerController : MonoBehaviour
             GameControl.instance.GameOver();
         }
 
-        if (other.gameObject.CompareTag("Ground"))
+        /*if (other.gameObject.CompareTag("Ground"))
         {
-            isOnGround = true;
+            
             Debug.Log("touching the ground");
                 anim.SetTrigger("Ground");
             
-        }
-        /*else
-        {
-            fly = true;
-            Debug.Log(" im flying");
-                anim.SetTrigger("Fly");
-            
- 
         }*/
-
-        if(other.gameObject.name != "Ground")
-        {
-            Debug.Log("Flying");
-            anim.SetTrigger("Fly");
-        }
         if (other.gameObject.CompareTag("Enemy"))
         {
             rb2d.velocity = Vector2.zero;
