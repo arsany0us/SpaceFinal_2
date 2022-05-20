@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 4610892947305806214}
   - component: {fileID: 8658067641766690985}
   - component: {fileID: -3761158021793382822}
-  - component: {fileID: -1572470503632124951}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -166,25 +165,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86b8fdfcf1a447c4d95849a182e4eb90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-1572470503632124951
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4300436807520194615}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea368c5a2cb7eb84083ee1d49467a37b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shootSpeed: 900
-  shootTimer: 0.5
-  shootPos: {fileID: 2752919942198326564}
-  bullet: {fileID: 3185455723909088365, guid: 9440a9d05cc068944a94ad1976632bb6, type: 3}
-  diePEffect: {fileID: 5770513284971486597, guid: 0deb2d46d6a2c0f4f9e67b770fb0dfec,
-    type: 3}
-  laserSound: {fileID: 8300000, guid: ceced20b9933cdc458582ffa648ffb8c, type: 3}
 --- !u!1001 &7075598147724942046
 PrefabInstance:
   m_ObjectHideFlags: 0
