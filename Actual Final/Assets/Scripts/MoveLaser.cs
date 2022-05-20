@@ -55,7 +55,7 @@ public class MoveLaser : MonoBehaviour
 
     void Die()
     {
-        if(diePEffect != null)
+        if (diePEffect != null)
         {
             Instantiate(diePEffect, transform.position, Quaternion.identity);
         }
