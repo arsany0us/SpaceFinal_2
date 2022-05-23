@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float upForce = 800f;
+    public float upForce = 700f;
 
     public bool fly = false;
     public bool isDead = false;
@@ -30,16 +30,20 @@ public class PlayerController : MonoBehaviour
     {
         if (isDead == false)
         {
-            if ((Input.GetKeyDown(KeyCode.Space)))
+            if ((Input.GetKey(KeyCode.Space)))
             {
 
                 rb2d.velocity = Vector2.zero;
                 rb2d.AddForce(new Vector2(0, upForce));
                 
-                {
+                
                     anim.SetTrigger("Fly");
-                }
+             
                
+            }
+            else
+            {
+                anim.SetTrigger("Ground");
             }
             
         }

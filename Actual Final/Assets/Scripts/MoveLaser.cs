@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class MoveLaser : MonoBehaviour
 {
-    public float shootSpeed, shootTimer;
-
+    public float shootSpeed = 300.0f; 
+    public float shootTimer;
     private bool isShooting;
 
     public Transform shootPos;
