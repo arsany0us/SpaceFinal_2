@@ -3666,6 +3666,11 @@ PrefabInstance:
       propertyPath: upForce
       value: 700
       objectReference: {fileID: 0}
+    - target: {fileID: 4803824550752635609, guid: df15fa4acc042434299b9c8b0ce33b91,
+        type: 3}
+      propertyPath: m_Mass
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4803824550752635614, guid: df15fa4acc042434299b9c8b0ce33b91,
         type: 3}
       propertyPath: m_Name
