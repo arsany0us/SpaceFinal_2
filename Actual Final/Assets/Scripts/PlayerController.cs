@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private float upForce = 2700f;
+    private float upForce = 3900f;
 
     public bool fly = false;
     public bool isDead = false;
