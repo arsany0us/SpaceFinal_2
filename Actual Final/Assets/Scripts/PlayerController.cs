@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float upForce = 1100f;
+    private float upForce = 2700f;
 
     public bool fly = false;
     public bool isDead = false;
@@ -18,10 +18,9 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
         rb2d = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        audioSource = GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>(); 
 
     }
 

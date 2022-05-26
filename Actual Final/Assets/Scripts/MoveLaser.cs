@@ -49,7 +49,7 @@ public class MoveLaser : MonoBehaviour
      if (collisionGameObject.CompareTag("Obstacle"))
         {
             Destroy(gameObject);
-            Die();
+             Die();
         }
     }
 
@@ -61,6 +61,7 @@ public class MoveLaser : MonoBehaviour
         }
         Destroy(gameObject);
     }
+    
 
     public void PlaySound(AudioClip clip)
     {

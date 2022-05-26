@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class BulletDie : MonoBehaviour
 {
+    public float dieTime;
     public GameObject diePEffect;
     // Start is called before the first frame update
     void Start()
     {
-        
+       
+        StartCoroutine(Timer());
     }
 
     // Update is called once per frame
@@ -21,9 +23,21 @@ public class BulletDie : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
+           
+            Die();
             Destroy(other.gameObject);
+
+        }
+        if (other.gameObject.CompareTag("Obstacle"))
+        {
             Die();
         }
+    }
+
+    IEnumerator Timer()
+    {
+        yield return new WaitForSeconds(dieTime);
+        Die();
     }
 
     void Die()

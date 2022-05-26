@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5773795863616222255}
   - component: {fileID: 4021672171531313921}
   - component: {fileID: 1649147063960779771}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Bullet Die
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -284,8 +284,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.9
-      minScalar: 0.3
+      scalar: 1.2
+      minScalar: 0.5
       maxCurve:
         serializedVersion: 2
         m_Curve:

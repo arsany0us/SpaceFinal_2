@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4803824550752635608}
   - component: {fileID: 4803824550752635615}
   - component: {fileID: 4803824550752635606}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: 'hero '
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 791e6cf62e30e054ba71cc9baa5c8fa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upForce: 800
+  upForce: 1100
   fly: 0
   isDead: 0
   isOnGround: 0
@@ -296,7 +296,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4803824551987262058}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: LaserPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
